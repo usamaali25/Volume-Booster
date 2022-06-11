@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Volume Booster</string>
+    <string name="home">Home</string>
+    <string name="playlist">Playlist</string>
+    <string name="equalizer">Equalizer</string>
+    <string name="theme">Theme</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="song_names">Song names</string>
+    <string name="numbers">TextView</string>
+    <string name="music_booster">Music Booster</string>
+    <string name="song_name">Song Name</string>
+    <string name="run_time">0:00</string>
+    <string name="total_time">2:02</string>
+    <string name="eq">Equalizer</string>
+    <string name="system_volume">System Volume</string>
+
+    <string-array name="custom">
+        <item>Custom</item>
+        <item>Normal</item>
+        <item>Classic</item>
+        <item>Dance</item>
+        <item>Flat</item>
+        <item>Heavy Metal</item>
+        <item>Hip Hop</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

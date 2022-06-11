@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <me.tankery.lib.circularseekbar.CircularSeekBar
+        android:id="@+id/analog_controller"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        app:cs_circle_style = "round"
+        app:cs_progress = "0"
+        app:cs_max = "100"
+        app:cs_negative_enabled = "false"
+        app:cs_move_outside_circle = "true"
+        app:cs_maintain_equal_circle = "true"
+        app:cs_use_custom_radii = "false"
+        app:cs_lock_enabled = "true"
+        app:cs_circle_x_radius = "0dp"
+        app:cs_circle_y_radius = "0dp"
+        app:cs_circle_stroke_width = "@dimen/_5sdp"
+        app:cs_disable_pointer = "false"
+        app:cs_pointer_stroke_width = "@dimen/_12sdp"
+        app:cs_pointer_halo_width = "@dimen/_5sdp"
+        app:cs_circle_fill = "@color/black"
+        app:cs_circle_color = "@color/gray"
+        app:cs_circle_progress_color = "@color/light_blue"
+        app:cs_pointer_color = "@color/light_blue"
+        app:cs_pointer_alpha_ontouch = "5"
+        app:cs_pointer_angle = "0"
+        app:cs_disable_progress_glow = "true"
+        app:cs_hide_progress_when_empty = "true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/analog_controller">
+
+        <TextView
+            android:id="@+id/system_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/system_volume"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/system_volume_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:max="10"
+            android:progress="2"
+            android:progressDrawable="@drawable/custom_seekbar"
+            android:thumb="@drawable/custom_equalizer_thumb" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mute"
+        android:background="@color/light_blue"
+        app:backgroundTint="@null"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintTop_toBottomOf="@+id/mute">
+
+        <Button
+            android:id="@+id/thirty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@color/light_blue"
+            android:text="30%"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/sixty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@color/light_blue"
+            android:text="60%"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/hund"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/light_blue"
+            android:text="100%"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/one_thirty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@color/light_blue"
+            android:text="130%"
+            app:backgroundTint="@null" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/light_blue"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="Max"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
